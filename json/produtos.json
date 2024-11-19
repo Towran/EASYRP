@@ -1,0 +1,77 @@
+{
+    "produtos": [
+      {
+        "id": "bronze",
+        "name": "VIP BRONZE",
+        "price": 30,
+        "image": "/assets/img/bronze.gif"
+      },
+      {
+        "id": "prata",
+        "name": "VIP PRATA",
+        "price": 50,
+        "image": "/assets/img/prata.gif"
+      },
+      {
+        "id": "ouro",
+        "name": "VIP OURO",
+        "price": 75,
+        "image": "/assets/img/ouro.gif"
+      },
+      {
+        "id": "platina",
+        "name": "VIP PLATINA",
+        "price": 100,
+        "image": "/assets/img/platina.gif"
+      },
+      {
+        "id": "r34",
+        "name": "Nissan SkyLine R34",
+        "price": 35,
+        "image": "/assets/img/r34 branco.png"
+      },
+      {
+        "id": "gti",
+        "name": "GOLF GTI MK7",
+        "price": 45,
+        "image": "/assets/img/Golf gti mk7.png"
+      },
+      {
+        "id": "lancer",
+        "name": "Lancer Evolution",
+        "price": 45,
+        "image": "/assets/img/lancer evolution.png"
+      },
+      {
+        "id": "r35",
+        "name": "Nissan GTR Nismo",
+        "price": 70,
+        "image": "/assets/img/nissan gtr nismo.png"
+      },
+      {
+        "id": "r6",
+        "name": "Yamaha YZF-R6",
+        "price": 50,
+        "image": "/assets/img/r6.png"
+      },
+      {
+        "id": "ninja",
+        "name": "Kawasaki Ninja",
+        "price": 50,
+        "image": "/assets/img/Ninja.png"
+      },
+      {
+        "id": "s1000rr",
+        "name": "BMW S1000RR",
+        "price": 50,
+        "image": "/assets/img/bmw s1000.png"
+      },
+      {
+        "id": "z1000",
+        "name": "Kawasaki z1000",
+        "price": 50,
+        "image": "/assets/img/z1000.png"
+      }
+    ]
+  }
+  

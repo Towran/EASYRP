@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="Pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- FIM GOOGLE FONTS -->
+
+    <!-- ICONS BOOTSTRATP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- FIM ICONS BOOTSTRAP -->
+
+    <title>Easy RP</title>
+    <link rel="icon" href="/assets/img/easy_roleplay.png" type="image/png">
+    <link rel="stylesheet" href="/assets/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="cabeçalho">
+            <div class="search-bar">
+                <input type="text" placeholder="Buscar produto..." id="search-input" oninput="buscarProdutos()">
+            </div>                                
+    
+            <div class="carrinho" id="cart-icon">
+                <button onclick="toggleCartDropdown()">
+                    <i class="bi bi-cart4"></i>
+                    <span id="item-count">0</span>
+                </button>
+                <span class="carrinho-texto">CHECKOUT</span>
+            </div>
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><i class="bi bi-list"></i></button>
+            </div>
+        
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="/index.html" class="mobile-link-menu">HOME</a></li>
+                    <li><a href="/pages/vips.html" class="mobile-link-menu">⭐VIPS</a></li>
+                    <li><a href="/pages/carros.html" class="mobile-link-menu">🚗CARROS</a></li>
+                    <li><a href="/pages/motos.html" class="mobile-link-menu">🏍️MOTOS</a></li>
+                    <li><a href="/pages/dinheiro.html" class="mobile-link-menu">💲DINHEIRO/ARMAS</a></li>
+                    <li><a href="/pages/remoção.html" class="mobile-link-menu">❌REMOÇÃO DE PUNIÇÕES</a></li>
+                    <li><a href="/pages/orgs.html" class="mobile-link-menu">☠️ORGS/FACS</a></li>
+                    <li><a href="/pages/outros.html" class="mobile-link-menu">✨OUTROS</a></li>
+                    <li><a href="/pages/contato.html" class="mobile-link-menu">FALE CONOSCO</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Container para as notificações -->
+    <div id="notification-container"></div>
+   
+
+    <div class="banner">
+        <img src="/assets/img/exemplo-banner.png" alt="Banner do site">
+    </div>
+
+    <div class="midia">
+        <h2><iframe width="400" height="350" src="https://www.youtube-nocookie.com/embed/KWAHGy_eee4?si=l3MEhRwsleQoUiwo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></h2>
+    </div>
+    
+    <div class="menu">
+        <nav>
+            <ul>
+                <li><a href="/index.html">HOME</a></li>
+                <li><a href="/pages/vips.html">⭐VIPS</a></li>
+                <li><a href="/pages/carros.html">🚗CARROS</a></li>
+                <li><a href="/pages/motos.html">🏍️MOTOS</a></li>
+                <li><a href="/pages/dinheiro.html">💲DINHEIRO/ARMAS</a></li>
+                <li><a href="/pages/remoção.html">❌REMOÇÃO DE PUNIÇÕES</a></li>
+                <li><a href="/pages/orgs.html">☠️ORGS/FACS</a></li>
+                <li><a href="/pages/outros.html">✨OUTROS</a></li>
+                <li><a href="/pages/contato.html">FALE CONOSCO</a></li>
+            </ul>    
+        </nav>
+    </div>
+    
+    <section class="produtos">
+        <p id="mensagem-nao-encontrado" style="display: none;"></p>
+        <div class="product bronze">
+            <img src="/assets/img/bronze.gif" alt="Bronze VIP">
+            <h1 class="product-name">VIP BRONZE</h1>
+            <footer class="footer">
+                <button class="detalhes">Detalhes</button>
+                <button class="valor" onclick="addToCart({
+                    id: 'bronze', 
+                    name: 'VIP BRONZE', 
+                    price: 30, 
+                    image: '/assets/img/bronze.gif'
+                })">R$ 30,00</button>
+            </footer>
+        </div>        
+        <div class="product prata">
+            <img src="/assets/img/prata.gif" alt="Prata VIP">
+            <h1 class="product-name">VIP PRATA</h1>
+            <footer class="footer">
+                <button class="detalhes">Detalhes</button>
+                <button class="valor" onclick="addToCart({
+                    id: 'prata', 
+                    name: 'VIP PRATA', 
+                    price: 50, 
+                    image: '/assets/img/prata.gif'
+                })">R$ 50,00</button>
+            </footer>
+        </div>        
+        <div class="product ouro">
+            <img src="/assets/img/ouro.gif" alt="Ouro VIP">
+            <h1 class="product-name">VIP OURO</h1>
+            <footer class="footer">
+                <button class="detalhes">Detalhes</button>
+                <button class="valor" onclick="addToCart({
+                    id: 'ouro', 
+                    name: 'VIP OURO', 
+                    price: 75, 
+                    image: '/assets/img/ouro.gif'
+                })">R$ 75,00</button>
+            </footer>
+        </div>        
+        <div class="product platina">
+            <img src="/assets/img/platina.gif" alt="Platina VIP">
+            <h1 class="product-name">VIP PLATINA</h1>
+            <footer class="footer">
+                <button class="detalhes">Detalhes</button>
+                <button class="valor" onclick="addToCart({
+                    id: 'platina', 
+                    name: 'VIP PLATINA', 
+                    price: 100, 
+                    image: '/assets/img/platina.gif'
+                })">R$ 100,00</button>
+            </footer>
+        </div>
+    </section>
+
+    <div id="cart-dropdown" class="cart-dropdown">
+        <h2>PRODUTOS</h2>
+        <ul id="cart-items"></ul>
+    </div>
+    
+    <script src="/js/duvidas.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/carrinho.js"></script>
+    <script src="/js/show2.js"></script>
+    <script src="/js/buscar.js"></script>
+</body>
+</html>
